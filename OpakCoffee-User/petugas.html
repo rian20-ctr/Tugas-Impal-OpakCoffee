@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/style/warehouse-style.css">
     <link rel="stylesheet" href="css/style/root.css">
 
+        <!-- Icon -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,12 +72,87 @@
     </div>
     <!-- End Navbar -->
 
+    <!-- Modal Edit User-->
+    <div class="modal fade" id="ModalTambah" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xl-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Produk</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="nama_barang" class="form-label">Nama Barang</label>
+                        <input type="email" class="form-control" id="nama_barang"
+                            aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Masukkan Nama Barang</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Kategori" class="form-label">Kategori</label>
+                        <select class="form-select" aria-label="Default select example" id="kategori">
+                            <option selected>Open this select menu</option>
+                            <option value="1">Makanan</option>
+                            <option value="2">Minuman</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Harga Produk</label>
+                        <input type="number" class="form-control" id="price" name="price"
+                            placeholder="Masukkan harga produk" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="stock" class="form-label">Stok Produk</label>
+                        <input type="number" class="form-control" id="stock" name="stock"
+                            placeholder="Masukkan stock produk" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Gambar Produk</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal Edit User -->
+
+<!-- Modal View -->
+<div class="modal fade" id="ModalView" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Data Produk</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal View -->
+
+
     <!-- Content -->
     <main>
         <div class="container">
             <header>
                 <h1>Daftar Petugas</h1>
             </header>
+
 
             <div class="petugas-table">
                 <div class="table-responsive">
@@ -86,6 +164,7 @@
                                 <th scope="col">Nama</th>
                                 <th scope="col">Alamat</th>
                                 <th scope="col">Email</th>
+                                <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -95,6 +174,12 @@
                                 <td>Otto</td>
                                 <td>@mdo</td>
                                 <td>@mdo</td>
+                                <td class="d-flex">
+                                    <button class="btn btn-info btn-sm me-1 " data-bs-toggle="modal" data-bs-target="#ModalView"><i class="bi bi-eye"></i></button>
+                                    <button class="btn btn-warning btn-sm me-1"><i
+                                            class="bi bi-pencil-square"></i></button>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
@@ -102,6 +187,12 @@
                                 <td>Thornton</td>
                                 <td>@fat</td>
                                 <td>@fat</td>
+                                <td class="d-flex">
+                                    <button class="btn btn-info btn-sm me-1 " data-bs-toggle="modal" data-bs-target="#ModalView"><i class="bi bi-eye"></i></button>
+                                    <button class="btn btn-warning btn-sm me-1"><i
+                                            class="bi bi-pencil-square"></i></button>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
@@ -109,6 +200,12 @@
                                 <td>@twitter</td>
                                 <td>@twitter</td>
                                 <td>@twitter</td>
+                                <td class="d-flex">
+                                    <button class="btn btn-info btn-sm me-1 " data-bs-toggle="modal" data-bs-target="#ModalView"><i class="bi bi-eye"></i></button>
+                                    <button class="btn btn-warning btn-sm me-1"><i
+                                            class="bi bi-pencil-square"></i></button>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
