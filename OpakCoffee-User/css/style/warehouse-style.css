@@ -1,0 +1,19 @@
+:root{
+    --coffe: rgb(200, 130, 46);
+    --font: rgb(227, 227, 227);
+    --font-secondary: rgb(62, 60, 60);
+}
+
+/* table */
+main header{
+    color: var(--font);
+    text-shadow: 2px 2px 2px rgb(62, 60, 60);
+    text-align: center;
+    margin: 2rem 0;
+}
+table tr{
+    color: var(--font);
+}
+.tambah{
+    margin-bottom: 1.5rem;
+}
